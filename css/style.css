@@ -5,6 +5,7 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  text-align: center;
 }
 
 /******************************************
@@ -15,6 +16,13 @@ img{
   margin: 0 auto;
 }
 
+.stats{
+  background: red;
+  margin: 3rem auto;
+  width: 40%;
+  padding: 1rem;
+  border-radius: 10px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
