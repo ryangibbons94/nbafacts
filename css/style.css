@@ -7,6 +7,13 @@
   box-sizing: border-box;
   text-align: center;
 }
+li{
+  list-style: none;
+  text-align: left;
+  font-size: 2rem;
+  color: #fff;
+  margin-top: 1rem;
+}
 
 /******************************************
 /* LAYOUT
@@ -17,7 +24,7 @@ img{
 }
 
 .stats{
-  background: red;
+  background: #696969;
   margin: 3rem auto;
   width: 40%;
   padding: 1rem;
