@@ -37,6 +37,8 @@ function getPlayer(){
         document.querySelector('.assists').innerText = `Assists per game: ${data[randomPlayer].assists_per_game}`
         document.querySelector('.steals').innerText = `Steals per game: ${data[randomPlayer].steals_per_game}`
         document.querySelector('.blocks').innerText = `Blocks per game: ${data[randomPlayer].blocks_per_game}`
+        document.querySelector('.games').innerText = `${data[randomPlayer].games_played} games played`
+        document.querySelector('.mins').innerText = `Minutes per game: ${data[randomPlayer].minutes_per_game}`
         playerPic()
       })
       .catch(err => {
