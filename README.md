@@ -1,5 +1,5 @@
 # NBA Facts
-A web app that fetches NBA players data from the first half of the 2017-2018 season and returns it to the user.
+A web app that fetches NBA players data from the first half of the 2017-2018 season and returns it to the user. 
 
 **Link to project:** https://2017-2018-nba-stats.netlify.app/
 
