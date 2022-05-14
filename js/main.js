@@ -1,5 +1,6 @@
 //need to account for suffixes like jr or iii in name, probably need to use its own function to get the first and last name
 
+import { getMainColor, getFullName, getSecondaryColor } from "nba-color";
 document.querySelector("#team").addEventListener("click", getTeam);
 document.querySelector("#player").addEventListener("click", getPlayer);
 let teams = [
@@ -44,8 +45,15 @@ function getTeam() {
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
-      console.log(data);
+      console.log(getMainColor(data[0].team_acronym).hex);
       document.querySelector("#teamName").innerText = data[0].team_name;
+      document.getElementById("stats").style.backgroundColor = getMainColor(
+        data[0].team_acronym
+      ).hex;
+      let li = document.querySelectorAll("li");
+      li.forEach(
+        (x) => (x.style.color = getSecondaryColor(data[0].team_acronym).hex)
+      );
     })
     .catch((err) => {
       console.log(`error ${err}`);
