@@ -45,15 +45,14 @@ function getTeam() {
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
-      console.log(getMainColor(data[0].team_acronym).hex);
+      console.log(data);
       document.querySelector("#teamName").innerText = data[0].team_name;
-      document.getElementById("stats").style.backgroundColor = getMainColor(
-        data[0].team_acronym
-      ).hex;
-      let li = document.querySelectorAll("li");
-      li.forEach(
-        (x) => (x.style.color = getSecondaryColor(data[0].team_acronym).hex)
-      );
+      if (getMainColor(teamName) != undefined) {
+        document.getElementById("stats").style.backgroundColor =
+          getMainColor(teamName).hex;
+        let li = document.querySelectorAll("li");
+        li.forEach((x) => (x.style.color = getSecondaryColor(teamName).hex));
+      }
     })
     .catch((err) => {
       console.log(`error ${err}`);
